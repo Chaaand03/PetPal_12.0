@@ -2,7 +2,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Get the API key from Vercel's environment variables
-const genAI = new GoogleGenerativeAI(AIzaSyDB1rMzfiHUWdGfZDEgpPcCFIIiiTpfiTc);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export default async function handler(request, response) {
   // Only allow POST requests
